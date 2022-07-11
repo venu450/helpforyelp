@@ -168,22 +168,23 @@ const Top = () => {
 
 function DisplayBusiness(Business: BusinessType) {
 	//<Image src={Business.image_url} />
-	return (
-		<div>
-			<Card title={Business.name}>
+	/*
+	<Card title={Business.name}>
 				<p>Review count : {Business.review_count}</p>
 				<p>Rating : {Business.rating}</p>
-				<Image src={Business.image_url} />
+				<Image className="h-10 w-10 " src={Business.image_url} />
 			</Card>
+	*  */
+	return (
+		<div className="flex items-center justify-center px-2">
+			<img className="h-10 w-10 " src={Business.image_url} />
+			<div>
+				<p> {Business.name}</p>
+				<p> {Business.rating}</p>
+			</div>
 		</div>
 	);
 }
-
-function OneBusinessDisplay(props: any) {
-	const Business: BusinessType = props.business;
-}
-
-function BusinessHelp(Business: BusinessType) {}
 
 const Bottom = (data: SearchResultType) => {
 	//console.log('InsideBottom');
@@ -200,6 +201,10 @@ const Bottom = (data: SearchResultType) => {
 	return (
 		<div>
 			<h1> total = {data.total}</h1>
+			<div className="px-2 bg-blue-600">
+				<p>line 1</p>
+				<p>line 2</p>
+			</div>
 			{TotalBusiness.map((Business) => (
 				<DisplayBusiness
 					key={Business.id}

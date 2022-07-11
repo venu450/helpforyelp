@@ -102,6 +102,7 @@ function Home() {
 				<nav>
 					<Link to="/home">Home</Link>
 					<Link to="/search"> Results </Link>
+					<Link to="/test"> test </Link>
 				</nav>
 			</div>
 		</div>
